@@ -1,0 +1,15 @@
+services:
+  frontend:
+    container_name: angular-nx-docker
+    build: .
+    image: angular-nx-image:v2
+    ports:
+      - 80:80
+    expose:
+      - 80
+    networks:
+      - internal-network
+
+networks:
+  internal-network:
+    driver: bridge
